@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+    <item android:title="@string/app_services">
+        <menu>
+            <item
+                android:id="@+id/navWhatsApp"
+                android:icon="@drawable/ic_whatsapp_logo"
+                android:title="@string/whatsapp"
+                android:checkable="true"/>
+            <item
+                android:id="@+id/navWhatsAppBusiness"
+                android:icon="@drawable/ic_whatsapp_business_logo"
+                android:title="@string/whatsapp_business"
+                android:checkable="true"/>
+
+            <item
+                android:id="@+id/navRestart"
+                android:icon="@drawable/ic_reload"
+                android:title="@string/restart_service"
+                android:checkable="true"/>
+            <item
+                android:id="@+id/navHowToUse"
+                android:icon="@drawable/ic_question_mark"
+                android:title="@string/how_to_use"
+                android:checkable="true"/>
+        </menu>
+    </item>
+
+    <item android:title="@string/about">
+        <menu>
+            <item
+                android:id="@+id/navPremium"
+                android:icon="@drawable/ic_premium"
+                android:title="@string/premium_purchase_remove_ads"
+                android:checkable="true"/>
+            <item
+                android:id="@+id/navShare"
+                android:icon="@drawable/ic_share"
+                android:title="@string/share_this_app"
+                android:checkable="true"/>
+
+            <item
+                android:id="@+id/navPolicies"
+                android:icon="@drawable/ic_policies"
+                android:title="@string/policies" />
+        </menu>
+    </item>
+
+
+    <item android:title="@string/help">
+        <menu>
+            <item
+                android:id="@+id/navFeedBack"
+                android:icon="@drawable/ic_feedbacks"
+                android:title="@string/feedbacks" />
+            <item
+                android:id="@+id/navAppUpdate"
+                android:icon="@drawable/ic_app_update"
+                android:title="@string/app_updates" />
+
+            <item
+                android:id="@+id/navRateUs"
+                android:icon="@drawable/ic_rate_star"
+                android:title="@string/rate_us" />
+            <item
+                android:id="@+id/navMoreApp"
+                android:icon="@drawable/ic_more"
+                android:title="@string/more_app_ads" />
+        </menu>
+    </item>
+    </group>
+</menu>

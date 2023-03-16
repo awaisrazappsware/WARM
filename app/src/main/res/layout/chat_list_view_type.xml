@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.widget.ImageView.ScaleType" />
+
+        <variable
+            name="position"
+            type="Integer" />
+
+        <variable
+            name="viewItemType"
+            type="com.awais.raza.car.wmr.base.adapter.ViewType" />
+
+        <variable
+            name="actionItemListener"
+            type="com.awais.raza.car.wmr.base.adapter.OnItemClickListener" />
+
+        <variable
+            name="itemViewModel"
+            type="com.awais.raza.car.wmr.model.ChatData" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{(v) -> actionItemListener.onItemClicked(v, viewItemType, position)}"
+        app:cardCornerRadius="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/carViewImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:cardCornerRadius="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ImageViewUserImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_chat_user"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewUserName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:text="@{itemViewModel.user}"
+                android:textColor="@color/label"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/cardViewNewMessage"
+                app:layout_constraintStart_toEndOf="@id/carViewImage"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Lorem Epsom" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewChatType"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/ic_camera"
+                android:tint="#958F8F"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/textViewLastMessage"
+                app:layout_constraintStart_toStartOf="@id/textViewUserName"
+                app:layout_constraintTop_toBottomOf="@id/textViewUserName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewLastMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginEnd="10dp"
+                android:text="@{itemViewModel.message}"
+                android:textColor="#675E5E"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toStartOf="@+id/textViewDate"
+                app:layout_constraintStart_toEndOf="@+id/imageViewChatType"
+                app:layout_constraintTop_toBottomOf="@id/textViewUserName"
+                tools:text="How are you doing Lorem " />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/label"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardViewNewMessage"
+                tools:text="02-02-2020" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardViewNewMessage"
+                android:layout_width="30dp"
+                android:layout_height="13dp"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:background="@drawable/card_view_right_corner_radius"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewUserName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/new_text"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:background="@color/opaqueSeparator" />
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

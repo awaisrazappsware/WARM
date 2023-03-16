@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/theme_background"
+            tools:context="com.awais.raza.car.wmr.ui.fragment.slider.slides.ThirdSlideFragment">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="@string/_1_receive_a_message"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainView"
+                style="@style/MyCardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitle">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageViewWhatAppLogo"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_whatsapp_logo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewChat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="@string/chat"
+                        android:textColor="@color/whatsapp_color"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageViewWhatAppLogo"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewWhatAppLogo"
+                        app:layout_constraintTop_toTopOf="@+id/imageViewWhatAppLogo" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="@string/_1_new_message_now"
+                        android:textColor="@color/text_description_color2"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageViewWhatAppLogo"
+                        app:layout_constraintStart_toEndOf="@+id/textViewChat"
+                        app:layout_constraintTop_toTopOf="@+id/imageViewWhatAppLogo" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/amelia"
+                        android:textColor="@color/label"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/imageViewWhatAppLogo"
+                        app:layout_constraintTop_toBottomOf="@+id/imageViewWhatAppLogo" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewMessageDelete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/pineapple_definitely_goes_on_pizza"
+                        android:textColor="@color/text_description_color2"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/textViewUserName"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewUserName" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="100dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imageViewUser"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_chat_user" />
+
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/_2_the_message_get_deleted"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mainView" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                style="@style/MyCardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitle2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageViewWhatAppLogo2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_whatsapp_logo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewChat2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="@string/chat"
+                        android:textColor="@color/whatsapp_color"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageViewWhatAppLogo2"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewWhatAppLogo2"
+                        app:layout_constraintTop_toTopOf="@+id/imageViewWhatAppLogo2" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewMessage2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="@string/_1_new_message_now"
+                        android:textColor="@color/text_description_color2"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageViewWhatAppLogo2"
+                        app:layout_constraintStart_toEndOf="@+id/textViewChat2"
+                        app:layout_constraintTop_toTopOf="@+id/imageViewWhatAppLogo2" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewUserName2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/amelia"
+                        android:textColor="@color/label"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/imageViewWhatAppLogo2"
+                        app:layout_constraintTop_toBottomOf="@+id/imageViewWhatAppLogo2" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewMessageDelete2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/pineapple_definitely_goes_on_pizza"
+                        android:textColor="@color/text_description_color2"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/textViewUserName2"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewUserName2" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="100dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imageViewUser2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_chat_user" />
+
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTitle3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/_3_wamr_recovers_it"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                style="@style/MyCardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitle3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageViewWhatAppLogo3"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_whatsapp_logo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewChat3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="@string/chat"
+                        android:textColor="@color/whatsapp_color"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageViewWhatAppLogo3"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewWhatAppLogo3"
+                        app:layout_constraintTop_toTopOf="@+id/imageViewWhatAppLogo3" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewMessage3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="@string/_1_new_message_now"
+                        android:textColor="@color/text_description_color2"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageViewWhatAppLogo3"
+                        app:layout_constraintStart_toEndOf="@+id/textViewChat3"
+                        app:layout_constraintTop_toTopOf="@+id/imageViewWhatAppLogo3" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewUserName3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/amelia"
+                        android:textColor="@color/label"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/imageViewWhatAppLogo3"
+                        app:layout_constraintTop_toBottomOf="@+id/imageViewWhatAppLogo3" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewMessageDelete3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/pineapple_definitely_goes_on_pizza"
+                        android:textColor="@color/text_description_color2"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/textViewUserName3"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewUserName3" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="100dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imageViewUser3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_chat_user" />
+
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

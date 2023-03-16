@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.awais.raza.car.wmr.viewModel.ChatViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/label1">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewPremium"
+            android:layout_width="0dp"
+            android:layout_height="240dp"
+            android:src="@drawable/ic_pre"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewCancel"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="20dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:src="@drawable/ic_baseline_cancel_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/image_gradient"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPremium">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="30dp"
+                android:layout_marginHorizontal="20dp"
+                android:text="@string/get_access_to_all_pro"
+                android:textColor="#565656"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTitle2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:text="@string/unlock_all_premium_features"
+                android:textColor="#565656"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/premiumFeatureView"
+            android:layout_width="0dp"
+            android:layout_height="63dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="20dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="#2647a798"
+            android:padding="10dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewPremium">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewCheck"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_check"
+                android:tint="@color/whatsapp_business"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewUnlimitedChats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="@string/unlimited_chats"
+                android:textColor="@color/whatsapp_business"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewCheck"
+                app:layout_constraintEnd_toStartOf="@+id/guideLine1"
+                app:layout_constraintStart_toEndOf="@id/imageViewCheck"
+                app:layout_constraintTop_toTopOf="@id/imageViewCheck" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewCheck2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_check"
+                android:tint="@color/whatsapp_business"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUnlimitedChats" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewNoAds"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="@string/no_ads"
+                android:textColor="@color/whatsapp_business"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewCheck2"
+                app:layout_constraintEnd_toStartOf="@+id/guideLine1"
+                app:layout_constraintStart_toEndOf="@id/imageViewCheck2"
+                app:layout_constraintTop_toTopOf="@id/imageViewCheck2" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLine1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.50" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewCheck3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_check"
+                android:tint="@color/whatsapp_business"
+                app:layout_constraintStart_toStartOf="@id/guideLine1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewAllowPermissions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="@string/allow_permissions"
+                android:textColor="@color/whatsapp_business"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewCheck3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageViewCheck3"
+                app:layout_constraintTop_toTopOf="@id/imageViewCheck3" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewCheck4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_check"
+                android:tint="@color/whatsapp_business"
+                app:layout_constraintStart_toStartOf="@id/guideLine1"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewCheck3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewSmoothUserInterface"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/smooth_user_interface"
+                android:textColor="@color/whatsapp_business"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewCheck4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageViewCheck4"
+                app:layout_constraintTop_toTopOf="@id/imageViewCheck4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="20dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/bottomView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/premiumFeatureView"
+            tools:itemCount="3"
+            tools:listitem="@layout/premium_list_view_type" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomView"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:background="@color/label1"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:weightSum="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/confirmButton"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginVertical="8dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/button_background2"
+                android:text="@string/confirm_purchase"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewBottom"
+                android:layout_width="0dp"
+                android:layout_height="16dp"
+                android:layout_marginVertical="10dp"
+                android:text="@string/auto_renewable_cancel_anytime"
+                android:textColor="#949090"
+                android:textSize="12sp"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/confirmButton" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

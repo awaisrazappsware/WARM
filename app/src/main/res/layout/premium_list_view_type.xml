@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.widget.ImageView.ScaleType" />
+
+        <variable
+            name="position"
+            type="Integer" />
+
+        <variable
+            name="viewItemType"
+            type="com.awais.raza.car.wmr.base.adapter.ViewType" />
+
+        <variable
+            name="actionItemListener"
+            type="com.awais.raza.car.wmr.base.adapter.OnItemClickListener" />
+
+        <variable
+            name="itemViewModel"
+            type="com.awais.raza.car.wmr.model.PremiumPackageData" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainView"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/card_view_selected_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioBtn"
+                android:layout_width="28dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="20dp"
+                android:buttonTint="@color/white"
+                android:onClick="@{(v) -> actionItemListener.onItemClicked(v, viewItemType, position)}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="@{itemViewModel.title}"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/radioBtn"
+                app:layout_constraintEnd_toStartOf="@+id/textViewPrice"
+                app:layout_constraintStart_toEndOf="@+id/radioBtn"
+                app:layout_constraintTop_toTopOf="@+id/radioBtn"
+                tools:text="@string/yearly_subscription" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/view"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:background="@drawable/card_background"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{itemViewModel.discount}"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_margin="2dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewTitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/view"
+                    app:layout_constraintTop_toTopOf="@+id/textViewTitle"
+                    tools:text="@string/_20_off" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:text="@{itemViewModel.price}"
+                android:textColor="@color/white"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                tools:text="@string/_60" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
